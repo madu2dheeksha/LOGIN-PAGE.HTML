@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Page</title>
+    <style> * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f1f1f1;
+    }
+    
+    .container {
+        position: relative;
+        background: #fff;
+        width: 100%;
+        max-width: 900px;
+        height: 480px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .sign-in-container {
+        grid-column: 1 / 2;
+    }
+    
+    .sign-up-container {
+        grid-column: 2 / 3;
+    }
+    
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    form h1 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    form input {
+        width: calc(100% - 40px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    form button {
+        width: calc(100% - 40px);
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        background: #333;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    form button:hover {
+        background: #555;
+    }
+    
+    .overlay-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        transition: transform 0.6s ease-in-out;
+        transform: translateX(50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .overlay {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #333;
+        color: #fff;
+    }
+    
+    .overlay-panel {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 40px;
+        transform: translateY(0);
+        transition: transform 0.6s ease;
+    }
+    
+    .overlay-left {
+        transform: translateY(0);
+    }
+    
+    .overlay-right {
+        transform: translateY(-100%);
+    }
+    
+    .overlay-panel h2 {
+        margin-bottom: 10px;
+    }
+    
+    .overlay-panel p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .overlay-panel button {
+        width: 150px;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+    
+    .overlay-panel button:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }</style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container sign-in-container">
+            <form id="loginForm" action="#">
+                <h1>Login</h1>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="form-container sign-up-container">
+            <form id="signupForm" action="#">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+       
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
